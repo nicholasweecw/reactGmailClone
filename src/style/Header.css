@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header {
+    @apply flex justify-evenly bg-blue-50 h-16 sticky
+  }
+
+  .header__left {
+    @apply flex relative right-10
+  }
+
+  .header__left > .menu-icon {
+    @apply relative top-5 right-14 text-gray-500
+  }
+
+  .header__left > .gmail-icon {
+    @apply relative top-3 right-10 h-10 w-28
+  }
+
+  .header__right {
+    @apply flex relative justify-evenly left-24 w-24 p-5
+  }
+
+  .header__right > .icon {
+    @apply ml-5
+  }
+
+  .header__right > .profile-pic {
+    @apply relative h-8 w-8 ml-5 rounded-full bottom-1
+  }
+}

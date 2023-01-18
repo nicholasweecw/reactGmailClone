@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .navbar {
+        @apply relative right-[120px] w-[725px] bg-blue-200 my-2 rounded-md
+    }
+
+    .navbar > .form > .btn > .search-icon {
+        @apply h-auto w-7 m-3
+    }
+
+    .navbar > .form > .input {
+        @apply bg-blue-200 focus:outline-none
+    }
+
+}
