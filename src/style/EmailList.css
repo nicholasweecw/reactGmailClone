@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .emailList__settings {
+        @apply w-[1180px] h-10 sticky h-12
+    }
+
+    .emailList__settingsLeft {
+        @apply float-left h-[100%]
+    }
+    
+    .emailList__settingsRight {
+        @apply float-right h-[100%]
+    }
+
+
+    .emailList__settingsLeft > .icon, .emailList__settingsRight > .icon {
+        @apply relative bottom-[6px] right-[6px] h-auto w-10 p-[11px] hover:bg-gray-200 hover:rounded-full hover:cursor-pointer
+    }
+
+    .emailList__settingsLeft > .select, .emailList__settingsRight > .select {
+        @apply relative bottom-[6px] right-[2px] h-[36px] w-[26px] px-[4px] ml-5 my-3 hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
+    }
+
+    .emailList__settingsLeft > .arrow, .emailList__settingsRight > .arrow {
+        @apply relative bottom-[6px] right-1 h-[36px] w-[20px] px-[1px] my-3 mr-3 hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
+    }
+}
