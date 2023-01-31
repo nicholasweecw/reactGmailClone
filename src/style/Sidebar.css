@@ -4,7 +4,7 @@
 
 @layer components {
     .sidebar {
-        @apply min-w-[250px] sticky h-screen bg-blue-50 
+        @apply min-w-[255px] sticky h-screen bg-blue-50 
     }
     
     .sidebar__top > .btn {

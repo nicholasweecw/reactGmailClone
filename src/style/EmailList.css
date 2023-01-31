@@ -4,7 +4,7 @@
 
 @layer components {
     .emailList__settings {
-        @apply w-[1180px] h-10 sticky h-12
+        @apply w-[1180px] sticky h-12
     }
 
     .emailList__settingsLeft {
@@ -17,14 +17,42 @@
 
 
     .emailList__settingsLeft > .icon, .emailList__settingsRight > .icon {
-        @apply relative bottom-[6px] right-[6px] h-auto w-10 p-[11px] hover:bg-gray-200 hover:rounded-full hover:cursor-pointer
+        @apply relative bottom-[6px] right-[11px] h-auto w-10 p-[11px] rounded-full hover:bg-gray-200 hover:cursor-pointer
     }
 
     .emailList__settingsLeft > .select, .emailList__settingsRight > .select {
-        @apply relative bottom-[6px] right-[2px] h-[36px] w-[26px] px-[4px] ml-5 my-3 hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
+        @apply relative bottom-[6px] right-[6px] h-[36px] w-[26px] px-[4px] ml-5 my-3 hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
     }
 
     .emailList__settingsLeft > .arrow, .emailList__settingsRight > .arrow {
-        @apply relative bottom-[6px] right-1 h-[36px] w-[20px] px-[1px] my-3 mr-3 hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
+        @apply relative bottom-[6px] right-[9px] h-[36px] w-[20px] px-[1px] my-3 mr-3 hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
+    }
+
+    .emailList__unread__top {
+        @apply w-[1180px] h-12
+    }
+
+    .emailList__unread__topLeft {
+        @apply flex float-left h-[36px] ml-[8px] my-[7px] w-[102px] rounded-[6px] hover:bg-gray-200 hover:cursor-pointer
+    }
+
+    .emailList__unread__topRight {
+        @apply float-right h-[100%]
+    }
+
+    .emailList__unread__topLeft > .arrow {
+        @apply relative h-10 w-10 p-[10px] bottom-[2px] right-[1px]
+    }
+
+    .emailList__unread__topLeft > .text {
+        @apply relative top-[4px] right-[1px]
+    }
+
+    .emailList__unread__topRight > .more {
+        @apply relative h-10 w-10 m-[4px] right-[20px] p-[11px] rounded-full hover:bg-gray-200 hover:cursor-pointer
+    }
+
+    .hr {
+        @apply relative w-[1180px] bottom-[3px]
     }
 }

@@ -20,7 +20,8 @@ function App() {
           <Route path='/' element={
             <>
               <EmailList />
-            </>}>
+            </>
+          }>
           </Route>
           <Route path='/mail' element={<Mail />}>
           </Route>
