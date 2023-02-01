@@ -28,12 +28,16 @@
         @apply relative bottom-[6px] right-[9px] h-[36px] w-[20px] px-[1px] my-3 mr-3 hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
     }
 
+    .emailList__unread {
+        @apply mb-[9px]
+    }
+
     .emailList__unread__top {
-        @apply w-[1180px] h-12
+        @apply w-[1180px] h-[47px]
     }
 
     .emailList__unread__topLeft {
-        @apply flex float-left h-[36px] ml-[8px] my-[7px] w-[102px] rounded-[6px] hover:bg-gray-200 hover:cursor-pointer
+        @apply flex float-left h-[36px] ml-[8px] my-[7px] w-[102px] rounded-[4px] hover:bg-gray-200 hover:cursor-pointer
     }
 
     .emailList__unread__topRight {
@@ -52,7 +56,47 @@
         @apply relative h-10 w-10 m-[4px] right-[20px] p-[11px] rounded-full hover:bg-gray-200 hover:cursor-pointer
     }
 
-    .hr {
+    .emailList__unread__top > .hr {
         @apply relative w-[1180px] bottom-[3px]
+    }
+
+    .emailList__unread__bottom {
+        @apply min-h-[48px]
+    }
+
+    .emailList__unread__bottom > .text {
+        @apply relative text-center font-light top-3 right-3
+    }
+
+    .emailList__unread__bottom > .hr {
+        @apply relative w-[1180px] top-[24px]
+    }
+
+    .emailList__others__top {
+        @apply w-[1180px] h-12
+    }
+
+    .emailList__others__topLeft {
+        @apply flex relative float-left top-[3px] h-[36px] ml-[8px] my-[7px] w-[162px] rounded-[4px] hover:bg-gray-200 hover:cursor-pointer 
+    }
+
+    .emailList__others__topLeft > .arrow {
+        @apply relative h-10 w-10 p-[10px] right-[1px] bottom-[1px]
+    }
+
+    .emailList__others__topLeft > .text {
+        @apply relative top-[5px] right-[1px]
+    }
+
+    .emailList__others__topRight {
+        @apply float-right h-[100%]
+    }
+
+    .emailList__others__topRight > .more {
+        @apply relative h-10 w-10 m-[4px] right-[20px] p-[11px] rounded-full hover:bg-gray-200 hover:cursor-pointer
+    }
+
+    .emailList__others__top > .hr {
+        @apply relative w-[1180px] top-[2px]
     }
 }

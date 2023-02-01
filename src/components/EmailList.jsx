@@ -36,15 +36,36 @@ const EmailList = () => {
             <div className="emailList__unread__topRight">
               <MoreVertIcon className="more" />
             </div>
+            <hr className="hr" />
           </div>
-          <hr className="hr" />
           <div className="emailList__unread__bottom">
-            {mails.map(() => (
-              <EmailItem />
-            ))}
+            {mails.length > 0 ? (
+              <div className="mails">
+                {mails.map(() => (
+                  <EmailItem />
+                ))}
+              </div>
+            ) : (
+              <p className="text">
+                Woohoo! You've read all the messages in your inbox.
+              </p>
+            )}
+            <hr className="hr" />
           </div>
         </div>
-        <div className="emailList__others"></div>
+
+        <div className="emailList__others">
+          <div className="emailList__others__top">
+            <div className="emailList__others__topLeft">
+              <KeyboardArrowUpIcon className="arrow" />
+              <p className="text">Everything else</p>
+            </div>
+            <div className="emailList__others__topRight">
+              <MoreVertIcon className="more" />
+            </div>
+            <hr className="hr" />
+          </div>
+        </div>
       </div>
     </div>
   );

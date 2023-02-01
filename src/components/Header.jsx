@@ -4,6 +4,7 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import Navbar from "./Navbar";
+import picture from "../profile-pic.png";
 
 const Header = () => {
   return (
@@ -21,11 +22,7 @@ const Header = () => {
 
       <div className="header__right">
         <SettingsOutlinedIcon className="icon" />
-        <img
-          src="https://lh3.googleusercontent.com/ogw/AOh-ky035WJVg_xE7XVzW8a6u_Nx7R4QzV55JiAY0L16=s32-c-mo"
-          alt=""
-          className="profile-pic"
-        ></img>
+        <img src={picture} alt="" className="profile-pic"></img>
       </div>
     </div>
   );
