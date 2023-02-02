@@ -6,10 +6,18 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import KeyboardIcon from "@mui/icons-material/Keyboard";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useState } from "react";
-import EmailItem from "./EmailItem";
+import EmailRow from "./EmailRow";
 
 const EmailList = () => {
-  const [mails, setMails] = useState([]);
+  const [mails, setMails] = useState([
+    {
+      id: 1,
+      title: "Test",
+      subject: "Test",
+      description: "Test",
+      time: "Now",
+    },
+  ]);
 
   return (
     <div>
@@ -41,8 +49,21 @@ const EmailList = () => {
           <div className="emailList__unread__bottom">
             {mails.length > 0 ? (
               <div className="mails">
-                {mails.map(() => (
-                  <EmailItem />
+                {mails.map((mail) => (
+                  <>
+                    <EmailRow
+                      title="Title"
+                      subject="subject is what am i talking about apparently this is not long enough so I am going to make it longer"
+                      description="description"
+                      time="time"
+                    />
+                    <EmailRow
+                      title="Title"
+                      subject="subject is what am i talking about apparently this is not long enough so I am going to make it longer"
+                      description="description"
+                      time="time"
+                    />
+                  </>
                 ))}
               </div>
             ) : (

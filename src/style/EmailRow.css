@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .emailRow {
+        @apply flex relative w-[1180px] items-center border-b-[1px] cursor-pointer z-[999]
+    }
+
+    .emailRow:hover {
+        @apply shadow-custom
+    }
+
+    .emailRow__options {
+        @apply flex
+    }
+
+    .emailRow__message {
+        @apply flex-[0.8] items-center text-[13px] bg-red-600
+    }
+
+    .emailRow__message > h4 {
+        @apply w-[400px] whitespace-nowrap overflow-hidden overflow-ellipsis px-[5px]
+    }
+}
