@@ -23,13 +23,13 @@ const EmailRow = ({ id, title, subject, description, time }) => {
       <h3 className="emailRow__title">{title}</h3>
 
       <div className="emailRow__message">
-        <h4>
-          {subject} -{" "}
+        <h3>
+          <span className="emailRow__subject">{subject}</span> -{" "}
           <span className="emailRow__description">{description}</span>
-        </h4>
+        </h3>
       </div>
 
-      <div className="emailRow__time">{time}</div>
+      <p className="emailRow__time">{time}</p>
     </div>
   );
 };

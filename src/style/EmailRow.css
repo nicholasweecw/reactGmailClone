@@ -4,7 +4,7 @@
 
 @layer components {
     .emailRow {
-        @apply flex relative w-[1180px] items-center border-b-[1px] cursor-pointer z-[999]
+        @apply flex relative h-[38px] w-[1180px] items-center border-b-[1px] cursor-pointer z-[999]
     }
 
     .emailRow:hover {
@@ -15,11 +15,27 @@
         @apply flex
     }
 
-    .emailRow__message {
-        @apply flex-[0.8] items-center text-[13px] bg-red-600
+    .emailRow__title {
+        @apply flex-[0.17] font-medium text-[14px]
     }
 
-    .emailRow__message > h4 {
-        @apply w-[400px] whitespace-nowrap overflow-hidden overflow-ellipsis px-[5px]
+    .emailRow__message {
+        @apply flex-[0.75] relative items-center left-11 text-[14px]
+    }
+
+    .emailRow__message > h3 {
+        @apply w-[800px] whitespace-nowrap overflow-hidden overflow-ellipsis text-gray-500 px-[5px]
+    }
+
+    .emailRow__subject {
+        @apply text-gray-900 font-medium
+    }
+
+    .emailRow__description {
+        @apply font-normal text-gray-500
+    }
+
+    .emailRow__time {
+        @apply relative -right-[50px]
     }
 }

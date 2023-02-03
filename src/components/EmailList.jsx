@@ -52,16 +52,16 @@ const EmailList = () => {
                 {mails.map((mail) => (
                   <>
                     <EmailRow
-                      title="Title"
-                      subject="subject is what am i talking about apparently this is not long enough so I am going to make it longer"
-                      description="description"
-                      time="time"
+                      title="Google Meet"
+                      subject="Changes to your group meeting experience"
+                      description="Learn how to extend your group meetings"
+                      time="10pm"
                     />
                     <EmailRow
                       title="Title"
-                      subject="subject is what am i talking about apparently this is not long enough so I am going to make it longer"
-                      description="description"
-                      time="time"
+                      subject="subject"
+                      description="Hello my name is Me I am you what else can I type here? I am not sure, so I will continue to type now. This should be enough bah. Okay I will stop here now"
+                      time="10pm"
                     />
                   </>
                 ))}
