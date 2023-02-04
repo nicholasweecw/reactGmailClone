@@ -17,15 +17,15 @@
 
 
     .emailList__settingsLeft > .icon, .emailList__settingsRight > .icon {
-        @apply relative bottom-[6px] right-[11px] h-auto w-10 p-[11px] rounded-full hover:bg-gray-200 hover:cursor-pointer
+        @apply relative bottom-[6px] right-[11px] h-auto w-10 p-[11px] rounded-full hover:bg-gray-100 hover:cursor-pointer
     }
 
     .emailList__settingsLeft > .select, .emailList__settingsRight > .select {
-        @apply relative bottom-[6px] right-[6px] h-[36px] w-[26px] px-[4px] ml-5 my-3 hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
+        @apply relative bottom-[6px] right-[6px] h-[36px] w-[26px] px-[4px] ml-5 my-3 hover:bg-gray-100 hover:rounded-sm hover:cursor-pointer
     }
 
     .emailList__settingsLeft > .arrow, .emailList__settingsRight > .arrow {
-        @apply relative bottom-[6px] right-[9px] h-[36px] w-[20px] px-[1px] my-3 mr-3 hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
+        @apply relative bottom-[6px] right-[9px] h-[36px] w-[20px] px-[1px] my-3 mr-3 hover:bg-gray-100 hover:rounded-sm hover:cursor-pointer
     }
 
     .emailList__unread {
@@ -37,7 +37,7 @@
     }
 
     .emailList__unread__topLeft {
-        @apply flex float-left h-[36px] ml-[8px] my-[7px] w-[102px] rounded-[4px] hover:bg-gray-200 hover:cursor-pointer
+        @apply flex float-left h-[36px] ml-[8px] my-[7px] w-[102px] rounded-[4px] hover:bg-gray-100 hover:cursor-pointer
     }
 
     .emailList__unread__topRight {
@@ -77,7 +77,7 @@
     }
 
     .emailList__others__topLeft {
-        @apply flex relative float-left top-[3px] h-[36px] ml-[8px] my-[7px] w-[162px] rounded-[4px] hover:bg-gray-200 hover:cursor-pointer 
+        @apply flex relative float-left top-[3px] h-[36px] ml-[8px] my-[7px] w-[162px] rounded-[4px] hover:bg-gray-100 hover:cursor-pointer 
     }
 
     .emailList__others__topLeft > .arrow {

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .mail__tools {
+        @apply w-[1180px] sticky h-12
+    }
+
+    
+    .mail__toolsLeft {
+        @apply flex float-left h-[100%] items-center
+    }
+
+    .mail__toolsRight {
+        @apply float-right h-[100%] items-center
+    }
+
+    .mail__toolsLeft > .arrowButton {
+        @apply mr-2
+    }
+
+    .mail__toolsLeft > .button {
+        @apply mt-1 ml-1 text-gray-600
+    }
+    
+    .button > .icon {
+        @apply p-[3px]
+    }
+
+    .mail__toolsLeft > .vl {
+        @apply relative top-[2px] border-l-2 h-[18px] w-[1px] mx-1 ml-[10px]
+    }
+
+
+    .mail__toolsRight > .select {
+        @apply relative bottom-[6px] right-[6px] h-[36px] w-[26px] px-[4px] ml-5 my-3 hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
+    }
+
+    .mail__toolsRight > .arrow {
+        @apply relative bottom-[6px] right-[9px] h-[36px] w-[20px] px-[1px] my-3 mr-3 hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
+    }
+}

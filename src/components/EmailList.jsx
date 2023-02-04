@@ -71,7 +71,6 @@ const EmailList = () => {
                 Woohoo! You've read all the messages in your inbox.
               </p>
             )}
-            <hr className="hr" />
           </div>
         </div>
 
