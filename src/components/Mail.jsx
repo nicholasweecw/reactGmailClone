@@ -15,6 +15,9 @@ import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRig
 import KeyboardIcon from "@mui/icons-material/Keyboard";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { useNavigate } from "react-router-dom";
+import LabelImportantIcon from "@mui/icons-material/LabelImportant";
+import PrintOutlinedIcon from "@mui/icons-material/PrintOutlined";
+import OpenInNewOutlinedIcon from "@mui/icons-material/OpenInNewOutlined";
 
 const Email = () => {
   const navigate = useNavigate();
@@ -61,14 +64,34 @@ const Email = () => {
         </div>
 
         <div className="mail__toolsRight">
-          <IconButton>
-            <KeyboardArrowLeftOutlinedIcon />
+          <IconButton className="olderNewerButton">
+            <KeyboardArrowLeftOutlinedIcon className="olderNewerIcon" />
           </IconButton>
-          <IconButton>
-            <KeyboardArrowRightOutlinedIcon />
+          <IconButton className="olderNewerButton">
+            <KeyboardArrowRightOutlinedIcon className="olderNewerIcon" />
           </IconButton>
           <KeyboardIcon className="select" />
           <ArrowDropDownIcon className="arrow" />
+        </div>
+      </div>
+      <div className="mail__subject">
+        <div className="mail__subjectLeft">
+          <p className="subject">
+            Hello my name is Me I am you what else can I type here? I am not
+            sure, so I will continue to type now. This should be enough bah.
+            Okay I will stop here now{" "}
+            <IconButton className="importantButton">
+              <LabelImportantIcon className="importantIcon" />
+            </IconButton>
+          </p>
+        </div>
+        <div className="mail__subjectRight">
+          <IconButton className="button">
+            <PrintOutlinedIcon className="icon" />
+          </IconButton>
+          <IconButton className="button">
+            <OpenInNewOutlinedIcon className="icon" />
+          </IconButton>
         </div>
       </div>
     </div>

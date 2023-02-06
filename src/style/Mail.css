@@ -13,7 +13,7 @@
     }
 
     .mail__toolsRight {
-        @apply float-right h-[100%] items-center
+        @apply float-right h-[100%] items-center 
     }
 
     .mail__toolsLeft > .arrowButton {
@@ -32,6 +32,14 @@
         @apply relative top-[2px] border-l-2 h-[18px] w-[1px] mx-1 ml-[10px]
     }
 
+    .olderNewerButton {
+        @apply relative bottom-[6px] text-gray-400
+    }
+
+    .olderNewerIcon {
+        @apply flex p-[2px]
+    }
+
 
     .mail__toolsRight > .select {
         @apply relative bottom-[6px] right-[6px] h-[36px] w-[26px] px-[4px] ml-5 my-3 hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
@@ -39,5 +47,33 @@
 
     .mail__toolsRight > .arrow {
         @apply relative bottom-[6px] right-[9px] h-[36px] w-[20px] px-[1px] my-3 mr-3 hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
+    }
+
+    .mail__subject {
+        @apply flex
+    }
+
+    .mail__subjectLeft {
+        @apply flex-[0.96] pl-[73px] pt-4
+    }
+
+    .mail__subjectLeft > .subject {
+        @apply text-[22px] font-light leading-7
+    }
+
+    .subject > .importantButton {
+        @apply relative bottom-[2px] ml-6
+    }
+
+    .importantIcon {
+        @apply text-yellow-400 p-[3px]
+    }
+
+    .mail__subjectRight {
+        @apply relative bottom-1 left-2 pt-4 pb-2
+    }
+
+    .mail__subjectRight > .button > .icon {
+        @apply p-[2px] text-gray-700
     }
 }
