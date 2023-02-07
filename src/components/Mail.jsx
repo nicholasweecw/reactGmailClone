@@ -18,6 +18,9 @@ import { useNavigate } from "react-router-dom";
 import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 import PrintOutlinedIcon from "@mui/icons-material/PrintOutlined";
 import OpenInNewOutlinedIcon from "@mui/icons-material/OpenInNewOutlined";
+import picture from "../profile-pic.png";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+import KeyboardReturnRoundedIcon from "@mui/icons-material/KeyboardReturnRounded";
 
 const Email = () => {
   const navigate = useNavigate();
@@ -93,6 +96,40 @@ const Email = () => {
             <OpenInNewOutlinedIcon className="icon" />
           </IconButton>
         </div>
+      </div>
+
+      <div className="mail__message">
+        <div className="mail__messageTop">
+          <div className="mail__messageTopLeft">
+            <img src={picture} alt="" className="profile-pic"></img>
+          </div>
+          <div className="mail__messageTopMiddle">
+            <p className="sender">
+              <span className="name">Nic W</span> {"<nicholasweecw@gmail.com>"}
+            </p>
+            <p className="to">
+              to me
+              <ArrowDropDownIcon className="arrow" />
+            </p>
+          </div>
+          <div className="mail__messageTopRight">
+            <p className="dateTime">
+              Feb 6, 2023, 8:40 AM {"("}1 day ago{")"}
+              <div className="icons">
+                <IconButton className="button">
+                  <StarBorderIcon className="icon" />
+                </IconButton>
+                <IconButton className="button">
+                  <KeyboardReturnRoundedIcon className="icon replyIcon" />
+                </IconButton>
+                <IconButton className="button">
+                  <MoreVertOutlinedIcon className="icon" />
+                </IconButton>
+              </div>
+            </p>
+          </div>
+        </div>
+        <div className="mail__messageBottom"></div>
       </div>
     </div>
   );

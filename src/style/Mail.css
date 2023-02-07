@@ -58,7 +58,7 @@
     }
 
     .mail__subjectLeft > .subject {
-        @apply text-[22px] font-light leading-7
+        @apply text-[22px] font-light leading-5 mt-2
     }
 
     .subject > .importantButton {
@@ -75,5 +75,57 @@
 
     .mail__subjectRight > .button > .icon {
         @apply p-[2px] text-gray-700
+    }
+
+    .mail__message {
+        @apply mt-[20px]
+    }
+
+    .mail__messageTop {
+        @apply flex
+    }
+
+    .mail__messageTopLeft {
+        @apply flex
+    }
+
+    .mail__messageTopLeft > .profile-pic {
+        @apply h-10 w-10 mx-4 rounded-full
+    }
+
+    .mail__messageTopMiddle {
+        @apply flex-[0.69]
+    }
+
+    .sender, .to {
+        @apply text-[12px] font-light text-black
+    }
+
+    .sender > .name {
+        @apply font-semibold text-[14px] text-black
+    }
+
+    .to > .arrow {
+        @apply relative h-[18px] w-[16px] ml-[2px] hover:bg-gray-200 hover:rounded-sm hover:cursor-pointer
+    }
+
+    .mail__messageTopRight {
+        @apply flex-[0.31] 
+    }
+
+    .mail__messageTopRight > .dateTime {
+        @apply flex text-[12px] text-gray-600
+    }
+
+    .dateTime > .icons {
+        @apply relative bottom-[10px] left-2 text-black
+    }
+
+    .icons > .button > .icon {
+        @apply text-black
+    }
+
+    .icons > .button > .replyIcon {
+        @apply -scale-y-100
     }
 }
