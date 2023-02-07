@@ -128,4 +128,8 @@
     .icons > .button > .replyIcon {
         @apply -scale-y-100
     }
+
+    .mail__messageBottom {
+        @apply relative pl-[70px] pt-2 text-[13px]
+    }
 }

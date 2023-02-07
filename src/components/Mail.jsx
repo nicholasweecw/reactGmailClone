@@ -129,7 +129,16 @@ const Email = () => {
             </p>
           </div>
         </div>
-        <div className="mail__messageBottom"></div>
+        <div className="mail__messageBottom">
+          <p>
+            Testing.
+            <br />
+            <br />
+            Best regards,
+            <br />
+            Nicholas
+          </p>
+        </div>
       </div>
     </div>
   );
