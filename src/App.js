@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import EmailList from './components/EmailList'
 import Mail from './components/Mail';
+import SendMail from './components/SendMail';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
           </Route>
         </Routes>
       </div>
+
+      <SendMail />
     </div>
   );
 }
