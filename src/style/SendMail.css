@@ -11,14 +11,48 @@
     }
 
     .sendMail__header {
-        @apply p-[13px] flex justify-between items-center
+        @apply p-[9px] flex items-center bg-blue-100
     }
 
-    .sendMail__header > .h3 {
-        @apply text-xs
+    .sendMail__header > h3 {
+        @apply flex-[0.995] text-[14px] pl-2
+    }
+
+    .sendMail__minimize, .sendMail__fullScreen, .sendMail__close {
+        @apply p-[4px]
+    }
+
+    .sendMail__minimize:hover, .sendMail__fullScreen:hover, .sendMail__close:hover {
+        @apply bg-gray-100 cursor-pointer
+    }
+
+    .sendMail > form {
+        @apply flex flex-col
+    }
+
+    .sendMail > form > input, .sendMail > form > textarea {
+        @apply py-[9px] mx-[16px] text-[14px] border-b-[1px]
+    }
+
+    .sendMail > form > input:focus, .sendMail > form > textarea:focus {
+        @apply outline-none
+    }
+
+    .sendMail__message {
+        vertical-align: text-top;
+        resize: none;
+        
+        @apply h-[330px] border-none
+    }
+
+    .sendMail__options {
+        @apply mx-[16px] my-[16px]
     }
 
     .sendMail__options > .sendMail__send {
         background-color: #0956d1 !important;
+        text-transform: capitalize;
+        
+        @apply rounded-full !important
     }
 }

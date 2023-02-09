@@ -9,15 +9,25 @@ const SendMail = () => {
     <div className="sendMail">
       <div className="sendMail__header">
         <h3>New Message</h3>
-        <MinimizeIcon className="sendMail__minimize" />
-        <OpenInFullOutlinedIcon className="sendMail__fullScreen" />
-        <CloseOutlinedIcon className="sendMail__close" />
+        <div className="options">
+          <MinimizeIcon className="sendMail__minimize" />
+          <OpenInFullOutlinedIcon className="sendMail__fullScreen" />
+          <CloseOutlinedIcon className="sendMail__close" />
+        </div>
       </div>
 
       <form>
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
+        <input
+          className="sendMail__recipients"
+          type="text"
+          placeholder="Recipients"
+        />
+        <input
+          classname="sendMail__subject"
+          type="text"
+          placeholder="Subject"
+        />
+        <textarea className="sendMail__message" type="text" />
 
         <div className="sendMail__options">
           <Button
