@@ -16,12 +16,16 @@ import LabelOutlinedIcon from "@mui/icons-material/LabelOutlined";
 import LabelIcon from "@mui/icons-material/Label";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import { useDispatch } from "react-redux";
+import { openSendMessage } from "../features/mailSlice";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="sidebar">
       <div className="sidebar__top">
-        <button className="btn">
+        <button className="btn" onClick={() => dispatch(openSendMessage())}>
           <CreateIcon className="icon" />
           <p className="text">Compose</p>
         </button>
