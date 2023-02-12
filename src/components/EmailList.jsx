@@ -5,11 +5,12 @@ import RefreshIcon from "@mui/icons-material/Refresh";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import KeyboardIcon from "@mui/icons-material/Keyboard";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import EmailRow from "./EmailRow";
+import { db } from "../firebase";
 
 const EmailList = () => {
-  const [mails, setMails] = useState([
+  const [emails, setEmails] = useState([
     {
       id: 1,
       title: "Test",
@@ -18,6 +19,19 @@ const EmailList = () => {
       time: "Now",
     },
   ]);
+
+  /* useEffect(() => {
+    db.collections("emails")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) =>
+        setEmails(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            data: doc.data(),
+          }))
+        )
+      );
+  }, []); */
 
   return (
     <div>
@@ -47,9 +61,9 @@ const EmailList = () => {
             <hr className="hr" />
           </div>
           <div className="emailList__unread__bottom">
-            {mails.length > 0 ? (
+            {emails.length > 0 ? (
               <div className="mails">
-                {mails.map((mail) => (
+                {emails.map((mail) => (
                   <>
                     <EmailRow
                       title="Google Meet"
