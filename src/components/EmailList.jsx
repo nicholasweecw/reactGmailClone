@@ -5,23 +5,16 @@ import RefreshIcon from "@mui/icons-material/Refresh";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import KeyboardIcon from "@mui/icons-material/Keyboard";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import { useEffect, useState } from "react";
 import EmailRow from "./EmailRow";
+import { useEffect, useState } from "react";
 import { db } from "../firebase";
 
 const EmailList = () => {
-  const [emails, setEmails] = useState([
-    {
-      id: 1,
-      title: "Test",
-      subject: "Test",
-      description: "Test",
-      time: "Now",
-    },
-  ]);
+  const [emails, setEmails] = useState([]);
 
-  /* useEffect(() => {
-    db.collections("emails")
+  useEffect(() => {
+    // Display Emails from DB
+    db.collection("emails")
       .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) =>
         setEmails(
@@ -31,7 +24,7 @@ const EmailList = () => {
           }))
         )
       );
-  }, []); */
+  }, []);
 
   return (
     <div>
@@ -61,30 +54,26 @@ const EmailList = () => {
             <hr className="hr" />
           </div>
           <div className="emailList__unread__bottom">
-            {emails.length > 0 ? (
-              <div className="mails">
-                {emails.map((mail) => (
-                  <>
-                    <EmailRow
-                      title="Google Meet"
-                      subject="Changes to your group meeting experience"
-                      description="Learn how to extend your group meetings"
-                      time="10pm"
-                    />
-                    <EmailRow
-                      title="Title"
-                      subject="subject"
-                      description="Hello my name is Me I am you what else can I type here? I am not sure, so I will continue to type now. This should be enough bah. Okay I will stop here now"
-                      time="10pm"
-                    />
-                  </>
-                ))}
-              </div>
-            ) : (
+            {/* {emails.length > 0 ? ( */}
+            <div className="emails">
+              {emails.map(
+                ({ id, data: { to, subject, message, timestamp } }) => (
+                  <EmailRow
+                    id={id}
+                    key={id}
+                    title={to}
+                    subject={subject}
+                    description={message}
+                    time={new Date(timestamp?.seconds * 1000).toUTCString()}
+                  />
+                )
+              )}
+            </div>
+            {/* ) : (
               <p className="text">
                 Woohoo! You've read all the messages in your inbox.
               </p>
-            )}
+            )} */}
           </div>
         </div>
 

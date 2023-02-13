@@ -21,9 +21,13 @@ import OpenInNewOutlinedIcon from "@mui/icons-material/OpenInNewOutlined";
 import picture from "../profile-pic.png";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import KeyboardReturnRoundedIcon from "@mui/icons-material/KeyboardReturnRounded";
+import { useSelector } from "react-redux";
+import { selectOpenMail } from "../features/mailSlice";
 
 const Email = () => {
   const navigate = useNavigate();
+
+  const selectedMail = useSelector(selectOpenMail);
 
   return (
     <div className="mail">
@@ -77,12 +81,14 @@ const Email = () => {
           <ArrowDropDownIcon className="arrow" />
         </div>
       </div>
+
       <div className="mail__subject">
         <div className="mail__subjectLeft">
           <p className="subject">
-            Hello my name is Me I am you what else can I type here? I am not
-            sure, so I will continue to type now. This should be enough bah.
-            Okay I will stop here now{" "}
+            {
+              // Optional Chaining:
+              selectedMail?.subject + " "
+            }
             <IconButton className="importantButton">
               <LabelImportantIcon className="importantIcon" />
             </IconButton>
@@ -105,7 +111,8 @@ const Email = () => {
           </div>
           <div className="mail__messageTopMiddle">
             <p className="sender">
-              <span className="name">Nic W</span> {"<nicholasweecw@gmail.com>"}
+              <span className="name">Nic W</span>{" "}
+              {"<" + selectedMail?.title + ">"}
             </p>
             <p className="to">
               to me
@@ -114,7 +121,7 @@ const Email = () => {
           </div>
           <div className="mail__messageTopRight">
             <p className="dateTime">
-              Feb 6, 2023, 8:40 AM {"("}1 day ago{")"}
+              {selectedMail?.time}
               <div className="icons">
                 <IconButton className="button">
                   <StarBorderIcon className="icon" />
@@ -130,14 +137,7 @@ const Email = () => {
           </div>
         </div>
         <div className="mail__messageBottom">
-          <p>
-            Testing.
-            <br />
-            <br />
-            Best regards,
-            <br />
-            Nicholas
-          </p>
+          <p>{selectedMail?.description}</p>
         </div>
       </div>
     </div>
