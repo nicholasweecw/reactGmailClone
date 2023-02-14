@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .login {
+        background-color: #f2f2f2;
+        
+        @apply grid place-items-center h-[100vh]
+    }
+
+    .login__container {
+        @apply flex flex-col
+    }
+
+    .login__container > img {
+        @apply object-contain h-[200px]
+    }
+
+    .login__container > Button {
+        background-color: #0956d1 !important;
+    };
+}
