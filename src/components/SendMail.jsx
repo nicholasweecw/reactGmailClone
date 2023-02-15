@@ -10,6 +10,8 @@ import { db } from "../firebase";
 import firebase from "firebase/compat/app";
 
 const SendMail = () => {
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
@@ -28,8 +30,6 @@ const SendMail = () => {
 
     dispatch(closeSendMessage());
   };
-
-  const dispatch = useDispatch();
 
   return (
     <div className="sendMail">

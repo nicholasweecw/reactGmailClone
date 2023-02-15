@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import {
   Routes, // instead of "Switch"
@@ -9,14 +9,30 @@ import Sidebar from './components/Sidebar';
 import EmailList from './components/EmailList'
 import Mail from './components/Mail';
 import SendMail from './components/SendMail';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectSendMessageIsOpen } from './features/mailSlice';
-import { selectUser } from './features/userSlice';
+import { login, selectUser } from './features/userSlice';
 import Login from './components/Login';
+import { auth } from './firebase';
 
 function App() {
   const sendMessageIsOpen = useSelector(selectSendMessageIsOpen);
   const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  // To persist Google Acct over refreshes
+  useEffect(() => {
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        // user is logged in
+        dispatch(login({
+          displayName: user.displayName,
+          email: user.email,
+          photoUrl: user.photoURL,
+        }))
+      }
+    })
+  }, [])
 
   return (
     <>

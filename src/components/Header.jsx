@@ -5,8 +5,23 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import Navbar from "./Navbar";
 import picture from "../profile-pic.png";
+import { logout, selectUser } from "../features/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { Avatar } from "@mui/material";
+import { auth } from "../firebase";
 
 const Header = () => {
+  // To import user account data
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  // Sign out from account
+  const signOut = () => {
+    auth.signOut().then(() => {
+      dispatch(logout());
+    });
+  };
+
   return (
     <div className="header">
       <div className="header__left">
@@ -22,7 +37,12 @@ const Header = () => {
 
       <div className="header__right">
         <SettingsOutlinedIcon className="icon" />
-        <img src={picture} alt="" className="profile-pic"></img>
+        <Avatar
+          onClick={signOut}
+          src={user?.photoUrl}
+          alt=""
+          className="profile-pic"
+        ></Avatar>
       </div>
     </div>
   );

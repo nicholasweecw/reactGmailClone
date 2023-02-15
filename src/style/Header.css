@@ -28,6 +28,6 @@
   }
 
   .header__right > .profile-pic {
-    @apply relative h-8 w-8 ml-5 rounded-full bottom-1
+    @apply relative h-8 w-8 ml-5 rounded-full bottom-1 hover:cursor-pointer
   }
 }

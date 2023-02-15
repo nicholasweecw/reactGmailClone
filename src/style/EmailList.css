@@ -56,7 +56,7 @@
         @apply relative h-10 w-10 m-[4px] right-[20px] p-[11px] rounded-full hover:bg-gray-200 hover:cursor-pointer
     }
 
-    .emailList__unread__top > .hr {
+    .hr {
         @apply relative w-[1180px] bottom-[3px]
     }
 
@@ -65,7 +65,7 @@
     }
 
     .emailList__unread__bottom > .text {
-        @apply relative text-center font-light top-3 right-3
+        @apply relative text-center font-light top-3 right-11 
     }
 
     .emailList__unread__bottom > .hr {

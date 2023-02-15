@@ -8,6 +8,7 @@ import { login } from "../features/userSlice";
 const Login = () => {
   const dispatch = useDispatch();
 
+  // Authentication using Google Acct
   const signIn = () => {
     auth
       .signInWithPopup(provider)

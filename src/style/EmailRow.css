@@ -41,12 +41,12 @@
         @apply bg-gray-100
     }
 
-    .emailRow__title {
-        @apply flex-[0.17] font-medium text-[14px]
+    .emailRow__title > h3 {
+        @apply w-[140px] font-medium text-[14px] overflow-hidden overflow-ellipsis
     }
 
     .emailRow__message {
-        @apply flex-[0.75] relative items-center left-11 text-[14px]
+        @apply flex-[0.75] relative items-center left-14 text-[14px] 
     }
 
     .emailRow__message > h3 {

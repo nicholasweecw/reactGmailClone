@@ -54,26 +54,29 @@ const EmailList = () => {
             <hr className="hr" />
           </div>
           <div className="emailList__unread__bottom">
-            {/* {emails.length > 0 ? ( */}
-            <div className="emails">
-              {emails.map(
-                ({ id, data: { to, subject, message, timestamp } }) => (
-                  <EmailRow
-                    id={id}
-                    key={id}
-                    title={to}
-                    subject={subject}
-                    description={message}
-                    time={new Date(timestamp?.seconds * 1000).toUTCString()}
-                  />
-                )
-              )}
-            </div>
-            {/* ) : (
-              <p className="text">
-                Woohoo! You've read all the messages in your inbox.
-              </p>
-            )} */}
+            {emails.length > 0 ? (
+              <div className="emails">
+                {emails.map(
+                  ({ id, data: { to, subject, message, timestamp } }) => (
+                    <EmailRow
+                      id={id}
+                      key={id}
+                      title={to}
+                      subject={subject}
+                      description={message}
+                      time={new Date(timestamp?.seconds * 1000).toUTCString()}
+                    />
+                  )
+                )}
+              </div>
+            ) : (
+              <>
+                <p className="text">
+                  Woohoo! You've read all the messages in your inbox.
+                </p>
+                <hr className="hr" />
+              </>
+            )}
           </div>
         </div>
 
