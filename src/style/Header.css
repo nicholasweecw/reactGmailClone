@@ -11,23 +11,32 @@
     @apply flex relative right-10
   }
 
-  .header__left > .menu-icon {
-    @apply relative top-5 right-14 text-gray-500
+  .header__left > .btn {
+    @apply relative top-2 right-[58px] h-12 w-12
+  }
+
+  .header__left > .btn:hover {
+    background-color: #e6e6e6;
   }
 
   .header__left > .gmail-icon {
-    @apply relative top-3 right-10 h-10 w-28
+    @apply relative top-3 right-14 h-10 w-28 cursor-pointer
   }
 
   .header__right {
-    @apply flex relative justify-evenly left-24 w-24 p-5
+    @apply flex relative justify-evenly left-16 w-24 p-5 
   }
 
-  .header__right > .icon {
-    @apply ml-5
+  .header__right > .btn {
+    @apply py-5 bottom-2
+  }
+
+
+  .header__right > .btn:hover {
+    background-color: #e6e6e6;
   }
 
   .header__right > .profile-pic {
-    @apply relative h-8 w-8 ml-5 rounded-full bottom-1 hover:cursor-pointer
+    @apply relative h-8 w-8 ml-3 rounded-full bottom-1 hover:cursor-pointer
   }
 }

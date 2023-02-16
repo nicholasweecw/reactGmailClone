@@ -4,15 +4,20 @@
 
 @layer components {
     .navbar {
-        @apply relative right-[115px] w-[725px] bg-blue-200 my-2 rounded-md
+        @apply relative right-[127px] w-[725px] bg-blue-200 my-2 rounded-md
     }
 
+    .navbar > .form > .btn {
+        @apply relative left-2 top-1
+    }
+
+
     .navbar > .form > .btn > .search-icon {
-        @apply h-auto w-7 m-3
+        @apply h-auto w-[24px] text-black
     }
 
     .navbar > .form > .input {
-        @apply bg-blue-200 focus:outline-none
+        @apply relative top-[6px] left-[16px] w-[650px] bg-blue-200 focus:outline-none
     }
 
 }

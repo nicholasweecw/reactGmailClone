@@ -46,11 +46,11 @@
     }
 
     .emailRow__message {
-        @apply flex-[0.75] relative items-center left-14 text-[14px] 
+        @apply flex-[0.75] relative items-center left-14 text-[14px]
     }
 
     .emailRow__message > h3 {
-        @apply w-[800px] whitespace-nowrap overflow-hidden overflow-ellipsis text-gray-500 px-[5px]
+        @apply w-[650px] whitespace-nowrap overflow-hidden overflow-ellipsis text-gray-500 px-[5px]
     }
 
     .emailRow__subject {
@@ -62,6 +62,6 @@
     }
 
     .emailRow__time {
-        @apply relative -right-[50px] text-[12px] font-semibold
+        @apply relative -right-[65px] text-[12px] font-semibold
     }
 }
