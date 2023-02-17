@@ -41,16 +41,20 @@
         @apply bg-gray-100
     }
 
+    .emailRow__title {
+        /* background-color: green; */
+    }
+
     .emailRow__title > h3 {
         @apply w-[140px] font-medium text-[14px] overflow-hidden overflow-ellipsis
     }
 
     .emailRow__message {
-        @apply flex-[0.75] relative items-center left-14 text-[14px]
+        @apply flex-[0.9] relative items-center left-14 text-[14px]
     }
 
     .emailRow__message > h3 {
-        @apply w-[650px] whitespace-nowrap overflow-hidden overflow-ellipsis text-gray-500 px-[5px]
+        @apply w-[600px] whitespace-nowrap overflow-hidden overflow-ellipsis text-gray-500 px-[5px] 
     }
 
     .emailRow__subject {
@@ -62,6 +66,10 @@
     }
 
     .emailRow__time {
-        @apply relative -right-[65px] text-[12px] font-semibold
+        @apply block relative w-[200px] left-[40px] ml-[75px] text-right
+    }
+
+    .emailRow__time > p {
+        @apply relative text-[12px] font-semibold
     }
 }

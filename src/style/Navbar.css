@@ -4,7 +4,7 @@
 
 @layer components {
     .navbar {
-        @apply relative right-[127px] w-[725px] bg-blue-200 my-2 rounded-md
+        @apply relative right-[140px] w-[725px] bg-blue-200 my-2 rounded-md
     }
 
     .navbar > .form > .btn {

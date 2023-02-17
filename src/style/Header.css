@@ -8,11 +8,11 @@
   }
 
   .header__left {
-    @apply flex relative right-10
+    @apply flex flex-[0.47] relative right-[70px]
   }
 
   .header__left > .btn {
-    @apply relative top-2 right-[58px] h-12 w-12
+    @apply relative top-2 left-[10px] h-12 w-12
   }
 
   .header__left > .btn:hover {
@@ -20,11 +20,11 @@
   }
 
   .header__left > .gmail-icon {
-    @apply relative top-3 right-14 h-10 w-28 cursor-pointer
+    @apply relative top-3 left-[15px] h-10 w-28 cursor-pointer
   }
 
   .header__right {
-    @apply flex relative justify-evenly left-16 w-24 p-5 
+    @apply flex relative justify-evenly left-[60px] w-44 p-5
   }
 
   .header__right > .btn {

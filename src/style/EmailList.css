@@ -28,6 +28,11 @@
         @apply relative bottom-[6px] right-[9px] h-[36px] w-[20px] px-[1px] my-3 mr-3 hover:bg-gray-100 hover:rounded-sm hover:cursor-pointer
     }
 
+    .emailList {
+        height: 610px;
+        overflow-y: scroll;
+    }
+
     .emailList__unread {
         @apply mb-[9px]
     }

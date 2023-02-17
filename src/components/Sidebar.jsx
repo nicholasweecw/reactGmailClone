@@ -32,37 +32,37 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar__bottom">
-        <button className="btn group">
+        <button className="inbox group">
           <InboxOutlinedIcon className="icon" />
-          <p className="text group-focus:font-semibold">Inbox</p>
+          <p className="text">Inbox</p>
         </button>
         <button className="btn group">
           <StarBorderIcon className="icon" />
-          <p className="text group-focus:font-semibold">Starred</p>
+          <p className="text">Starred</p>
         </button>
         <button className="btn group">
           <AccessTimeIcon className="icon" />
-          <p className="text group-focus:font-semibold">Snoozed</p>
+          <p className="text">Snoozed</p>
         </button>
         <button className="btn group">
           <LabelImportantTwoToneIcon className="icon" />
-          <p className="text group-focus:font-semibold">Important</p>
+          <p className="text">Important</p>
         </button>
         <button className="btn group">
           <SendOutlinedIcon className="icon" />
-          <p className="text group-focus:font-semibold">Sent</p>
+          <p className="text">Sent</p>
         </button>
         <button className="btn group">
           <InsertDriveFileOutlinedIcon className="icon" />
-          <p className="text group-focus:font-semibold">Drafts</p>
+          <p className="text">Drafts</p>
         </button>
         <button className="btn group">
           <LabelOutlinedIcon className="icon" />
-          <p className="text group-focus:font-semibold">Categories</p>
+          <p className="text">Categories</p>
         </button>
         <button className="btn group">
           <KeyboardArrowDownIcon className="icon" />
-          <p className="text group-focus:font-semibold">More</p>
+          <p className="text">More</p>
         </button>
       </div>
     </div>

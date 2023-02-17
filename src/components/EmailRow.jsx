@@ -41,6 +41,7 @@ const EmailRow = ({ id, title, subject, description, time }) => {
           <LabelImportantTwoToneIcon className="important" />
         </IconButton>
       </div>
+
       <div className="emailRow__title">
         <h3>{title}</h3>
       </div>
@@ -52,7 +53,9 @@ const EmailRow = ({ id, title, subject, description, time }) => {
         </h3>
       </div>
 
-      <p className="emailRow__time">{time}</p>
+      <div className="emailRow__time">
+        <p>{time}</p>
+      </div>
     </div>
   );
 };

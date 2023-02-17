@@ -58,14 +58,34 @@ const EmailList = () => {
               <div className="emails">
                 {emails.map(
                   ({ id, data: { to, subject, message, timestamp } }) => (
-                    <EmailRow
-                      id={id}
-                      key={id}
-                      title={to}
-                      subject={subject}
-                      description={message}
-                      time={new Date(timestamp?.seconds * 1000).toUTCString()}
-                    />
+                    <>
+                      <EmailRow
+                        id={id}
+                        key={id}
+                        title={to}
+                        subject={subject}
+                        description={message}
+                        time={new Date(timestamp?.seconds * 1000).toUTCString()}
+                      />
+                      {/* <EmailRow
+                        title="test"
+                        subject="test"
+                        description="test"
+                        time="test"
+                      />
+                      <EmailRow
+                        title="test"
+                        subject="test"
+                        description="test"
+                        time="test"
+                      />
+                      <EmailRow
+                        title="test"
+                        subject="test"
+                        description="test"
+                        time="test"
+                      /> */}
+                    </>
                   )
                 )}
               </div>

@@ -4,12 +4,21 @@
 
 @layer components {
     .sidebar {
-        @apply min-w-[255px] sticky h-screen bg-blue-50 
+        @apply min-w-[255px] sticky h-screen bg-blue-50
+    }
+
+    .sidebar__top {
+        @apply pb-[16px]
     }
     
     .sidebar__top > .btn {
         @apply flex bg-blue-200 text-sm p-4 rounded-2xl mt-2 ml-2
     }
+
+    .sidebar__top > .btn:hover {
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.24);
+    }
+
 
     .sidebar__top > .btn > .icon {
         @apply mr-3
@@ -20,11 +29,11 @@
     }
 
     .sidebar__bottom {
-        @apply mt-[16px]
+        
     }
 
     .sidebar__bottom > .btn {
-        @apply flex w-[240px] h-[32px] rounded-r-full pl-3 bg-blue-50 hover:bg-gray-200 focus:bg-blue-200
+        @apply flex w-[240px] h-[32px] rounded-r-full pl-3 bg-blue-50 hover:bg-gray-200
     }
 
     .sidebar__bottom > .btn > .icon {
@@ -34,5 +43,18 @@
     .sidebar__bottom > .btn > .text {
         @apply relative text-sm top-[6px] font-light
     }
+
+    .sidebar__bottom > .inbox {
+        @apply flex w-[240px] h-[32px] rounded-r-full pl-3 bg-blue-200
+    }
+
+    .sidebar__bottom > .inbox > .icon {
+        @apply h-auto w-[18px] mx-4 my-2 
+    }
+
+    .sidebar__bottom > .inbox > .text {
+        @apply relative text-sm top-[6px] font-semibold
+    }
+
 
 }
