@@ -3,7 +3,14 @@
 A clone of the Gmail web application built using ReactJS and Redux that features the latest Google Material You design. Functionalities include composition of new email using the new message panel, sending of email to and opening emails from the unread emails list. Firebase is used for the backend, and the app also uses Gmail account authentication.
 
 # Screenshots of Application:
+Main Dashboard:
 ![Main Dashboard](res/Main_Dashboard.png)
+
+Create New Email:
+![Create New Email](res/Create_New_Email.png)
+
+View Email Details:
+![View Email Details](res/View_Email_Details.png)
 
 
 # Getting Started with Create React App and Redux
